@@ -28,7 +28,7 @@ class GalleryDatabase {
 
   void _createDatabase(Database database, int version) async {
     await database
-        .execute('CREATE TABLE Photos(id AUTOINCREMENT , photo TEXT)');
+        .execute('CREATE TABLE Photos(id INTEGER PRIMARY KEY, photo TEXT)');
   }
 
   Future<List<PhotoEntity>> getAllPhotos() async {
